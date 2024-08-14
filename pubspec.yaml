@@ -1,6 +1,6 @@
 name: strategem
 description: "Strategem is a strategic gaming platform inspired by game theory, featuring classic puzzles, multiplayer battles, and solo challenges to test and sharpen your mind."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
