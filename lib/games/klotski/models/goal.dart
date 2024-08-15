@@ -8,7 +8,7 @@ class Goal {
 
   bool isMatched(Board board) {
     for (int i = 0; i < goalTiles.length; i++) {
-      if (goalTiles[i].id != board.tiles[i].id) {
+      if (goalTiles[i].color != board.tiles[(i ~/ 3) * 2 + 6 + i].color) {
         return false;
       }
     }

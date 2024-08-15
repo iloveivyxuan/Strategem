@@ -15,7 +15,7 @@ class GoalWidget extends StatelessWidget {
       child: GridView.builder(
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
+              crossAxisCount: 3, crossAxisSpacing: 0, mainAxisSpacing: 0),
           itemCount: goal.goalTiles.length,
           itemBuilder: (context, index) {
             return TileWidget(tile: goal.goalTiles[index]);

@@ -18,8 +18,8 @@ class GameView extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Flexible(flex: 2, child: GoalWidget()),
-              Padding(padding: EdgeInsets.all(4.0)),
+              Flexible(flex: 1, child: GoalWidget()),
+              Padding(padding: EdgeInsets.all(10)),
               Flexible(flex: 5, child: BoardWidget()),
               ControlPanel(),
             ],

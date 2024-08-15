@@ -13,7 +13,7 @@ class BoardWidget extends StatelessWidget {
     return GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 5, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
+            crossAxisCount: 5, crossAxisSpacing: 6, mainAxisSpacing: 6),
         itemCount: board.tiles.length,
         itemBuilder: (context, index) {
           return GestureDetector(
@@ -21,7 +21,7 @@ class BoardWidget extends StatelessWidget {
               Provider.of<GameController>(context, listen: false)
                   .moveTile(index)
             },
-            child: TileWidget(tile: board.tiles[index]),
+            child: ShiningTileWidget(tile: board.tiles[index]),
           );
         });
   }

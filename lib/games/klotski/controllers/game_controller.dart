@@ -56,10 +56,18 @@ class GameController extends ChangeNotifier {
   void moveTile(int tileIndex) {
     board.moveTile(tileIndex);
     notifyListeners();
+    if (goal.isMatched(board)) {
+      print('You matched the goal');
+    }
   }
 
   void resetGame() {
     _initializeBoard();
     notifyListeners();
+  }
+
+  void restartGame() {
+    _initializeBoard();
+    _generateGoal();
   }
 }
